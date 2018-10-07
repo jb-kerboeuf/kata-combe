@@ -69,6 +69,11 @@ public class Main {
                 break;
             default: return "M:Error";
         }
+        
+        if (in.extraHot) {
+            drinkMakerString += "h";
+        }
+        
         switch (in.sugar) {
             case 0: drinkMakerString += "::";
                 break;
