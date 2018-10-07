@@ -6,10 +6,10 @@ package katacombe;
  */
 public class Instruction {
     String message;
-    String drink;
+    Drink drink;
     int sugar;
 
-    public Instruction(String drink, int sugar) {
+    public Instruction(Drink drink, int sugar) {
         this.drink = drink;
         this.sugar = sugar;
     }

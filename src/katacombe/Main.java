@@ -10,13 +10,18 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Instruction instruction1 = new Instruction("tea", 1);
+        // init the possible drinks with their price
+        Drink tea = new Drink("tea", 0.4);
+        Drink coffee = new Drink("coffee", 0.6);
+        Drink chocolate = new Drink("chocolate", 0.5);
+        
+        Instruction instruction1 = new Instruction(tea, 1);
         System.out.println(mapForDrinkMaker(instruction1));
         
-        Instruction instruction2 = new Instruction("chocolate", 0);
+        Instruction instruction2 = new Instruction(chocolate, 0);
         System.out.println(mapForDrinkMaker(instruction2));
         
-        Instruction instruction3 = new Instruction("coffee", 2);
+        Instruction instruction3 = new Instruction(coffee, 2);
         System.out.println(mapForDrinkMaker(instruction3));
         
         Instruction instruction4 = new Instruction("test message");
@@ -31,7 +36,7 @@ public class Main {
             return drinkMakerString;
         }
         
-        switch (in.drink) {
+        switch (in.drink.name) {
             case "tea": drinkMakerString = "T";
                 break;
             case "chocolate": drinkMakerString = "H";
