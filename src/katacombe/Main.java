@@ -14,6 +14,7 @@ public class Main {
         Drink tea = new Drink("tea", 0.4);
         Drink coffee = new Drink("coffee", 0.6);
         Drink chocolate = new Drink("chocolate", 0.5);
+        Drink orange = new Drink("orange juice", 0.6);
         
         // test first iteration
         Instruction instruction1 = new Instruction(tea, 1);
@@ -63,6 +64,8 @@ public class Main {
             case "chocolate": drinkMakerString = "H";
                 break;
             case "coffee": drinkMakerString = "C";
+                break;
+            case "orange juice": drinkMakerString = "O";
                 break;
             default: return "M:Error";
         }
