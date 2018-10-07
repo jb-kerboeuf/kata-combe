@@ -10,6 +10,17 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Instruction instruction1 = new Instruction("tea", 1);
+        System.out.println(mapForDrinkMaker(instruction1));
+        
+        Instruction instruction2 = new Instruction("chocolate", 0);
+        System.out.println(mapForDrinkMaker(instruction2));
+        
+        Instruction instruction3 = new Instruction("coffee", 2);
+        System.out.println(mapForDrinkMaker(instruction3));
+        
+        Instruction instruction4 = new Instruction("test message");
+        System.out.println(mapForDrinkMaker(instruction4));
     }
     
     public static String mapForDrinkMaker(Instruction in) {
