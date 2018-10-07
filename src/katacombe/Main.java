@@ -36,6 +36,16 @@ public class Main {
             return drinkMakerString;
         }
         
+        double moneyDue = in.drink.price - in.providedMoney;
+        if (moneyDue > 0) {
+            drinkMakerString = String.format(
+                    "M:The price is %s €, you have to add %s €",
+                    in.drink.price,
+                    moneyDue
+            );
+            return drinkMakerString;
+        }
+        
         switch (in.drink.name) {
             case "tea": drinkMakerString = "T";
                 break;
