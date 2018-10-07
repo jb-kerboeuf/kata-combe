@@ -15,6 +15,7 @@ public class Main {
         Drink coffee = new Drink("coffee", 0.6);
         Drink chocolate = new Drink("chocolate", 0.5);
         
+        // test first iteration
         Instruction instruction1 = new Instruction(tea, 1);
         System.out.println(mapForDrinkMaker(instruction1));
         
@@ -26,6 +27,16 @@ public class Main {
         
         Instruction instruction4 = new Instruction("test message");
         System.out.println(mapForDrinkMaker(instruction4));
+        
+        // test second iteration
+        Instruction instruction5 = new Instruction(tea, 1, 0.5);
+        System.out.println(mapForDrinkMaker(instruction5));
+        
+        Instruction instruction6 = new Instruction(chocolate, 0, 0.5);
+        System.out.println(mapForDrinkMaker(instruction6));
+        
+        Instruction instruction7 = new Instruction(coffee, 2, 1);
+        System.out.println(mapForDrinkMaker(instruction7));
     }
     
     public static String mapForDrinkMaker(Instruction in) {
