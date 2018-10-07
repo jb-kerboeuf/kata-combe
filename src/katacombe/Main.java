@@ -17,6 +17,8 @@ public class Main {
         Drink orange = new Drink("orange juice", 0.6);
         
         // test first iteration
+        System.out.println("test first iteration");
+        
         Instruction instruction1 = new Instruction(tea, 1);
         System.out.println(mapForDrinkMaker(instruction1));
         
@@ -30,6 +32,8 @@ public class Main {
         System.out.println(mapForDrinkMaker(instruction4));
         
         // test second iteration
+        System.out.println("\ntest second iteration");
+        
         Instruction instruction5 = new Instruction(tea, 1, 0.5);
         System.out.println(mapForDrinkMaker(instruction5));
         
@@ -38,6 +42,21 @@ public class Main {
         
         Instruction instruction7 = new Instruction(coffee, 2, 1);
         System.out.println(mapForDrinkMaker(instruction7));
+        
+        // test third iteration
+        System.out.println("\ntest third iteration");
+        
+        Instruction instruction8 = new Instruction(orange, 0, 0.6);
+        System.out.println(mapForDrinkMaker(instruction8));
+    
+        Instruction instruction9 = new Instruction(coffee, 0, 0.6, true);
+        System.out.println(mapForDrinkMaker(instruction9));
+        
+        Instruction instruction10 = new Instruction(chocolate, 1, 0.6, true);
+        System.out.println(mapForDrinkMaker(instruction10));
+        
+        Instruction instruction11 = new Instruction(tea, 2, 0.6, true);
+        System.out.println(mapForDrinkMaker(instruction11));
     }
     
     public static String mapForDrinkMaker(Instruction in) {
