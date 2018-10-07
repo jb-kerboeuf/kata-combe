@@ -64,7 +64,7 @@ public class Main {
                 break;
             case "coffee": drinkMakerString = "C";
                 break;
-            default: drinkMakerString = "M:Error";
+            default: return "M:Error";
         }
         switch (in.sugar) {
             case 0: drinkMakerString += "::";
@@ -73,7 +73,7 @@ public class Main {
                 break;
             case 2: drinkMakerString += ":2:0";
                 break;
-            default: drinkMakerString = "M:Error";
+            default: return "M:Error";
         }
         
         return drinkMakerString;
